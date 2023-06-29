@@ -6,7 +6,7 @@ public struct CachedAsyncImage<Content: View>: View {
     private let placeholder: Content
     @StateObject private var loader = CachedAsyncImageImageLoader()
     
-    init(path: String?,
+    init(_ path: String?,
          @ViewBuilder placeholder: @escaping () -> Content = { ProgressView() })
     {
         self.path = path
